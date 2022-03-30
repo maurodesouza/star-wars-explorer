@@ -5,5 +5,6 @@ export * from './logo';
 export * from './heading';
 export * from './footer';
 export * from './menu';
+export * from './search';
 export * from './card';
 export * from './card-list';
