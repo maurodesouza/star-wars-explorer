@@ -26,6 +26,7 @@ module.exports = {
         loose: true,
       },
     ],
+    ['transform-class-properties'],
   ],
 
   env: {
