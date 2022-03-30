@@ -1,7 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
-  * {
+   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,16 +10,11 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     cursor: default;
+    -webkit-tap-highlight-color: transparent;
   }
 
   html {
     font-size: 10px;
-  }
-
-  html,
-  body,
-  #__next {
-    min-height: 100vh;
   }
 
   ul,
@@ -46,10 +41,12 @@ const GlobalStyles = createGlobalStyle`
     button,
     input,
     textarea {
-      font-family: ${theme.font.family};
-      font-size: ${theme.font.sizes.medium};
+      font-family: ${theme.font.family.primary};
+      font-size: ${theme.font.sizes.small};
+      font-weight: ${theme.font.weights.normal};
+      color: ${theme.colors.white};
     }
   `}
 `;
 
-export default GlobalStyles;
+export { GlobalStyles };

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/container <Wrapper /> should render the wrapper styles correct 1`] = `
+.c0 {
+  width: min(100%,84rem);
+  height: 100%;
+  margin-inline: auto;
+  position: relative;
+}
+
+<div
+  class="c0"
+/>
+`;
