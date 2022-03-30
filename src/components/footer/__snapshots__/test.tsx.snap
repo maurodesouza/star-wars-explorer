@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> should render the footer styles correct 1`] = `
+.c0 {
+  text-align: center;
+  width: min(100%,57rem);
+  color: #FFF;
+  font-size: 1.2rem;
+}
+
+.c1 {
+  margin-top: calc(1.2rem / 2);
+}
+
+.c1 a {
+  color: #FFF;
+}
+
+.c1 a:hover {
+  color: #FFE81F;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media (min-width:768px) {
+  .c0 {
+    font-size: 1.6rem;
+  }
+}
+
+<footer
+  class="c0"
+>
+  <strong
+    class=""
+  >
+    Data provided by SWAPI
+  </strong>
+  <p
+    class="c1"
+  >
+    Made with ❤ by
+     
+    <a
+      href="https://www.linkedin.com/in/maurodesouzaa/"
+      rel="noreferrer"
+      target="_blank"
+    >
+      Mauro de Souza
+    </a>
+     
+  </p>
+</footer>
+`;
