@@ -1,3 +1,5 @@
+import './next-image.mock'
+
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles, theme } from 'styles';
 
