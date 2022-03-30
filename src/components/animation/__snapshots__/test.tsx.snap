@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Animation /> should render the animation styles correct 1`] = `
+.c0 {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  color: #FFF;
+  font-size: 1.6rem;
+  max-width: 40rem;
+  text-align: center;
+}
+
+@media (min-width:450px) {
+  .c1 {
+    font-size: 2.4rem;
+  }
+}
+
+<div
+  class="c0"
+>
+  <svg
+    data-testid="lottie"
+  />
+  <p
+    class="c1"
+  >
+    foo
+  </p>
+</div>
+`;
