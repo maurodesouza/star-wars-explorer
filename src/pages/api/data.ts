@@ -1,6 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+
 import { swapiApi } from 'services';
-import { Entities } from 'types';
+import { Entities, SWAPIGetAllResponse } from 'types';
+
 import { getEndpointEntityPath, getImageUrl } from 'utils';
 
 type RequestQuery = {
@@ -31,7 +33,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const path = getEndpointEntityPath(entity);
 
-    const { data } = await swapiApi.get(`/${path}`, {
+    const { data } = await swapiApi.get<SWAPIGetAllResponse>(`/${path}`, {
       params: {
         search,
       },
