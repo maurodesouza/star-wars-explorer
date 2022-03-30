@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> should render the card styles correct 1`] = `
+.c0 {
+  width: 100%;
+  height: 26rem;
+  background-color: #FFF;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.8rem;
+  border: 1px solid #FFF;
+}
+
+.c0 * {
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  will-change: transform opacity;
+}
+
+.c0:hover {
+  box-shadow: 8px 8px 16px rgba(0,0,0,0.5);
+}
+
+.c0:hover .c1 {
+  opacity: 1;
+}
+
+.c0:hover .c3 {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+.c0:hover img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.c2 {
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+  padding: 1.2rem 1.2rem;
+  background: linear-gradient( 180deg,transparent 0%,rgba(0,0,0,0.4) 30%,rgba(0,0,0,0.8) 69%,#000 100% );
+}
+
+.c4 {
+  position: relative;
+  font-size: 1.6rem;
+  color: #FFF;
+  font-weight: 700;
+  -webkit-transform: translateX(-20%);
+  -ms-transform: translateX(-20%);
+  transform: translateX(-20%);
+}
+
+<div
+  class="c0"
+>
+  <span
+    style="box-sizing: border-box; display: block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px;"
+  >
+    <img
+      alt="C-3PO"
+      data-nimg="fill"
+      decoding="async"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: cover;"
+    />
+    <noscript />
+  </span>
+  <div
+    class="c1 c2"
+  >
+    <h3
+      class="c3 c4"
+    >
+      C-3PO
+    </h3>
+  </div>
+</div>
+`;
