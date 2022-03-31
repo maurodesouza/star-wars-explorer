@@ -39,7 +39,7 @@ export const MenuLink = styled.a`
 
       & + & {
         margin-top: 0;
-        margin-left: calc(${theme.spacings.large} * 2);
+        margin-left: calc(${theme.spacings.large});
       }
 
       &::after {
