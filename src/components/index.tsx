@@ -10,4 +10,5 @@ export * from './menu';
 export * from './search';
 export * from './card';
 export * from './card-list';
+export * from './relations-list';
 export * from './entity-details';
