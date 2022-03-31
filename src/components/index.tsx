@@ -12,3 +12,4 @@ export * from './card';
 export * from './card-list';
 export * from './relations-list';
 export * from './entity-details';
+export * from './entity-info';
