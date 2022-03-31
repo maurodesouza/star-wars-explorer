@@ -93,7 +93,7 @@ export const MenuFull = styled.div<MenuFullProps>`
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
-    padding: 0 ${theme.spacings.small} 0;
+    padding: 0 ${theme.spacings.small} ${theme.spacings.small};
     z-index: 20;
 
     ${IconWrapper} {
