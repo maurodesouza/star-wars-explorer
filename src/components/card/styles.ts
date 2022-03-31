@@ -30,6 +30,11 @@ export const Container = styled.div`
         transform: translateX(0%);
       }
 
+      ${IconWrapper} {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+
       img {
         transform: scale(1.1);
       }
@@ -45,6 +50,7 @@ export const Content = styled.div`
     bottom: 0;
     display: flex;
     align-items: end;
+    justify-content: space-between;
     padding: ${theme.spacings.xsmall} ${theme.spacings.xsmall};
     background: linear-gradient(
       180deg,
@@ -66,22 +72,22 @@ export const Label = styled.h3`
   `}
 `;
 
-export const Wrapper = styled.div`
+export const IconWrapper = styled.button`
   ${({ theme }) => css`
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    gap: ${theme.spacings.xsmall};
-    color: ${theme.colors.bg};
-  `}
-`;
+    width: 2.4rem;
+    height: 2.4rem;
+    color: ${theme.colors.error};
+    margin-left: ${theme.spacings.xsmall};
+    flex-shrink: 0;
+    border: 0;
+    opacity: 0;
+    background: none;
+    cursor: pointer;
+    z-index: 10;
+    transform: translateX(-40%);
 
-export const Text = styled.p`
-  ${({ theme }) => css`
-    font-size: ${theme.font.sizes.medium};
-    font-weight: ${theme.font.weights.bold};
-    color: ${theme.colors.bg};
-    text-align: center;
+    & * {
+      cursor: pointer;
+    }
   `}
 `;
