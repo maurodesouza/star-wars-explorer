@@ -7,4 +7,5 @@ export * from './createArray';
 export * from './slugfy';
 export * from './getEntityRelationships';
 export * from './populateEntityRelationships';
+export * from './getEntityDataFromUrl';
 export * from './storage';
