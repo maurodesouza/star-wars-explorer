@@ -1,7 +1,8 @@
 import { events } from 'app';
 import axios from 'axios';
+import { usePersistedState } from 'hooks/use-persisted-data';
 import { useEffect, useRef, useState } from 'react';
-import { Entities, Events } from 'types';
+import { Entities, Entity, Events } from 'types';
 
 type Cache<T = any> = {
   [key: string]: T;
@@ -21,7 +22,7 @@ const useSearch = () => {
   const entityRef = useRef<Entities>(Entities.CHARACTERS);
   const searchRef = useRef('');
 
-  const [data, setData] = useState([]);
+  const [data, setData] = usePersistedState<Entity[]>('last-search', []);
   const [isFetching, setIsFetching] = useState(false);
 
   const fetchData = async (event: FetchDataArgs) => {
@@ -54,7 +55,7 @@ const useSearch = () => {
 
       abortRef.current = abortController;
 
-      const { data } = await axios.get('/api/data', {
+      const { data } = await axios.get<Entity[]>('/api/data', {
         params: { entity, search },
         signal: abortController.signal,
       });
