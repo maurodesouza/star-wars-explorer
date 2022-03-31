@@ -4,4 +4,6 @@ export enum Events {
 
   ADD_FAVORITE = 'app.favorites.add',
   REMOVE_FAVORITE = 'app.favorites.remove',
+
+  ADD_ACHIEVEMENT = 'app.achievement.add',
 }
