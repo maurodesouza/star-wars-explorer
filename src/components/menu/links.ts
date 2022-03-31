@@ -4,6 +4,10 @@ const links = [
     path: '/',
   },
   {
+    label: 'Achievements',
+    path: '/achievements',
+  },
+  {
     label: 'Favorites',
     path: '/favorites',
   },
