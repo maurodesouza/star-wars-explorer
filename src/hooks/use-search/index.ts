@@ -1,7 +1,9 @@
-import { events } from 'app';
-import axios from 'axios';
-import { usePersistedState } from 'hooks/use-persisted-data';
 import { useEffect, useRef, useState } from 'react';
+import axios from 'axios';
+
+import { events } from 'app';
+import { usePersistedState } from 'hooks';
+
 import { Entities, Entity, Events } from 'types';
 
 type Cache<T = any> = {
