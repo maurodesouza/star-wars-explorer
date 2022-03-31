@@ -2,7 +2,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 
 import { ThemeProvider } from 'styled-components';
-import { FavoritesProvider, AchievementsProvider } from 'context';
+import { Provider } from 'context';
 
 import { GlobalStyles, theme } from 'styles';
 
@@ -21,11 +21,9 @@ const App = ({ Component, pageProps }: AppProps) => {
       </Head>
       <GlobalStyles />
 
-      <AchievementsProvider>
-        <FavoritesProvider>
-          <Component {...pageProps} />
-        </FavoritesProvider>
-      </AchievementsProvider>
+      <Provider>
+        <Component {...pageProps} />
+      </Provider>
     </ThemeProvider>
   );
 };
