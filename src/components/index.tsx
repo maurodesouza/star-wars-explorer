@@ -2,6 +2,7 @@ export * from './container';
 export * from './helpers';
 export * from './animation';
 export * from './logo';
+export * from './image';
 export * from './heading';
 export * from './footer';
 export * from './menu';
