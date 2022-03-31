@@ -9,7 +9,7 @@ import { useFavorites } from 'hooks';
 import { Entity } from 'types';
 import * as S from './styles';
 
-type FavoriteHandleProps = Entity;
+export type FavoriteHandleProps = Entity;
 
 const FavoriteHandle = (data: FavoriteHandleProps) => {
   const { favorites } = useFavorites();

@@ -4,7 +4,7 @@ import { Entity } from 'types';
 
 import * as S from './styles';
 
-type EntityDetailsProps = Entity;
+export type EntityDetailsProps = Entity;
 
 const EntityDetails = (data: EntityDetailsProps) => {
   const { image, title, extras = {} } = data;

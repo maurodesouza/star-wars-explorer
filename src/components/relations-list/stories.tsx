@@ -1,10 +1,12 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import RelationsList from '.';
+import { RelationsList, RelationsListProps } from '.';
 
 export default {
   title: 'RelationsList',
   component: RelationsList,
-} as Meta;
+} as Meta<RelationsListProps>;
 
-export const Basic: Story = args => <RelationsList {...args} />;
+export const Basic: Story<RelationsListProps> = args => (
+  <RelationsList {...args} />
+);

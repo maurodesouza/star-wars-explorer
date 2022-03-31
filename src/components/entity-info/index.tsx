@@ -3,7 +3,7 @@ import { Entity } from 'types';
 
 import * as S from './styles';
 
-type EntityInfoProps = Entity;
+export type EntityInfoProps = Entity;
 
 const EntityInfo = (data: EntityInfoProps) => {
   return (

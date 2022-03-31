@@ -1,10 +1,10 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import EntityDetails from '.';
+import { EntityInfo, EntityInfoProps } from '.';
 
 export default {
-  title: 'EntityDetails',
-  component: EntityDetails,
-} as Meta;
+  title: 'EntityInfo',
+  component: EntityInfo,
+} as Meta<EntityInfoProps>;
 
-export const Basic: Story = args => <EntityDetails {...args} />;
+export const Basic: Story<EntityInfoProps> = args => <EntityInfo {...args} />;

@@ -1,10 +1,12 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import FavoriteHandle from '.';
+import { FavoriteHandle, FavoriteHandleProps } from '.';
 
 export default {
   title: 'FavoriteHandle',
   component: FavoriteHandle,
-} as Meta;
+} as Meta<FavoriteHandleProps>;
 
-export const Basic: Story = args => <FavoriteHandle {...args} />;
+export const Basic: Story<FavoriteHandleProps> = args => (
+  <FavoriteHandle {...args} />
+);
