@@ -7,7 +7,7 @@ const envs = {
 
   storage: {
     local: {
-      key: process.env.LOCAL_STORAGE_KEY!,
+      key: process.env.NEXT_PUBLIC_LOCAL_STORAGE_KEY!,
     },
   },
 };
