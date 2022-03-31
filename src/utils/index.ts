@@ -6,4 +6,5 @@ export * from './sleep';
 export * from './createArray';
 export * from './slugfy';
 export * from './getEntityRelationships';
+export * from './populateEntityRelationships';
 export * from './storage';
