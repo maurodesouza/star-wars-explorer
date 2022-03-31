@@ -10,7 +10,7 @@ const EntityInfo = (data: EntityInfoProps) => {
     <S.Container>
       <EntityDetails {...data} />
 
-      <S.Title>Relations</S.Title>
+      <S.Title>Associated</S.Title>
 
       <RelationsList relations={data.relations || []} />
     </S.Container>
