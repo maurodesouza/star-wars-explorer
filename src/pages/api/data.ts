@@ -45,7 +45,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       return {
         id,
         entity,
-        label: item.name || item.title,
+        title: item.name || item.title,
         image: getImageUrl(entity, id),
       };
     });

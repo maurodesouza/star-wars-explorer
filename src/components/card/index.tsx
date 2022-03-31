@@ -3,17 +3,12 @@ import { useRouter } from 'next/router';
 import { Image } from 'components';
 import { slugfy } from 'utils';
 
-import { Entities } from 'types';
+import { Entities, Entity, Partials } from 'types';
 import * as S from './styles';
 
-export type CardProps = {
-  id: string;
-  label: string;
-  image: string;
-  entity?: Entities;
-};
+export type CardProps = Omit<Partials<Entity, 'entity'>, 'relations'>;
 
-const Card = ({ entity = Entities.CHARACTERS, image, label }: CardProps) => {
+const Card = ({ entity = Entities.CHARACTERS, image, title }: CardProps) => {
   const router = useRouter();
 
   const handleRedirect = async (e: React.MouseEvent) => {
@@ -22,14 +17,14 @@ const Card = ({ entity = Entities.CHARACTERS, image, label }: CardProps) => {
     router.push(href);
   };
 
-  const href = `/universe/${entity}/${slugfy(label)}`;
+  const href = `/universe/${entity}/${slugfy(title)}`;
 
   return (
     <S.Container role="link" onClick={handleRedirect}>
-      <Image image={image} alt={label} />
+      <Image image={image} alt={title} />
 
       <S.Content>
-        <S.Label>{label}</S.Label>
+        <S.Label>{title}</S.Label>
       </S.Content>
     </S.Container>
   );

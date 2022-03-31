@@ -11,7 +11,7 @@ type CardListStoryProps = CardListProps & {
 
 const props = {
   id: '1',
-  label: 'C-3PO',
+  title: 'C-3PO',
   image:
     'https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/characters/2.jpg',
   entity: Entities.CHARACTERS,

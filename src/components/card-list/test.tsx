@@ -15,7 +15,7 @@ jest.mock('components', () => ({
 
 const itemMock = {
   id: '1',
-  label: 'C-3PO',
+  title: 'C-3PO',
   image: 'image',
   entity: Entities.CHARACTERS,
 };
