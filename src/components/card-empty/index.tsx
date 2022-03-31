@@ -14,4 +14,4 @@ const EmptyCard = ({ id }: EmptyCardProps) => {
   );
 };
 
-export default EmptyCard;
+export { EmptyCard };

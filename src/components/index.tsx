@@ -9,6 +9,7 @@ export * from './footer';
 export * from './menu';
 export * from './search';
 export * from './card';
+export * from './card-empty';
 export * from './card-list';
 export * from './relations-list';
 export * from './entity-details';
