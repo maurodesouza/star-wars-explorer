@@ -1,9 +1,14 @@
-import { Card, CardProps } from 'components';
+import { Card, EmptyCard } from 'components';
+import { Entity } from 'types';
 
 import * as S from './styles';
 
+type Item = Entity & {
+  empty?: boolean;
+};
+
 export type CardListProps = {
-  items?: CardProps[];
+  items?: Item[];
 };
 
 const CardList = ({ items = [] }: CardListProps) => {
@@ -14,9 +19,11 @@ const CardList = ({ items = [] }: CardListProps) => {
 
   return (
     <S.Container>
-      {items.map(item => (
-        <Card key={item.id} {...item} />
-      ))}
+      {items.map(item => {
+        const Item = item.empty ? EmptyCard : Card;
+
+        return <Item key={item.id} {...item} />;
+      })}
 
       {needFill &&
         Array(Math.abs(lackForFill))
