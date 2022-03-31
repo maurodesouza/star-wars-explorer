@@ -1,40 +1,19 @@
 import { useRouter } from 'next/router';
-import {
-  Favorite as FavoriteIcon,
-  FavoriteBorder as FavoteBorderIcon,
-} from '@styled-icons/material';
 
-import { Image } from 'components';
+import { Image, FavoriteHandle } from 'components';
 import { slugfy } from 'utils';
-
-import { useFavorites } from 'hooks';
-import { events } from 'app';
 
 import { Entities, Entity, Partials } from 'types';
 import * as S from './styles';
 
-export type CardProps = Omit<Partials<Entity, 'entity'>, 'relations'>;
+export type CardProps = Omit<
+  Partials<Entity, 'entity'>,
+  'relations' | 'extras'
+>;
 
-const Card = ({
-  entity = Entities.CHARACTERS,
-  image,
-  title,
-  id,
-}: CardProps) => {
+const Card = (data: CardProps) => {
+  const { entity = Entities.CHARACTERS, image, title } = data;
   const router = useRouter();
-  const { favorites } = useFavorites();
-
-  const handleAddToFavorites = (e: React.MouseEvent) => {
-    e.stopPropagation();
-
-    events.favorites.add({ id, title, entity, image });
-  };
-
-  const handleRemoveFromFavorites = (e: React.MouseEvent) => {
-    e.stopPropagation();
-
-    events.favorites.remove(id);
-  };
 
   const handleRedirect = async (e: React.MouseEvent) => {
     e.preventDefault();
@@ -43,7 +22,6 @@ const Card = ({
   };
 
   const href = `/universe/${entity}/${slugfy(title)}`;
-  const isFavorite = favorites.find(item => item.id === id);
 
   return (
     <S.Container role="link" onClick={handleRedirect}>
@@ -52,15 +30,9 @@ const Card = ({
       <S.Content>
         <S.Label>{title}</S.Label>
 
-        {isFavorite ? (
-          <S.IconWrapper onClick={handleRemoveFromFavorites}>
-            <FavoriteIcon aria-label="Remove hero to favorites" />
-          </S.IconWrapper>
-        ) : (
-          <S.IconWrapper onClick={handleAddToFavorites}>
-            <FavoteBorderIcon aria-label="Add hero to favorites" />
-          </S.IconWrapper>
-        )}
+        <S.Wrapper>
+          <FavoriteHandle {...data} entity={entity} />
+        </S.Wrapper>
       </S.Content>
     </S.Container>
   );

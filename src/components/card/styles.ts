@@ -30,7 +30,7 @@ export const Container = styled.div`
         transform: translateX(0%);
       }
 
-      ${IconWrapper} {
+      ${Wrapper} {
         opacity: 1;
         transform: translateX(0%);
       }
@@ -72,22 +72,12 @@ export const Label = styled.h3`
   `}
 `;
 
-export const IconWrapper = styled.button`
+export const Wrapper = styled.div`
   ${({ theme }) => css`
-    width: 2.4rem;
-    height: 2.4rem;
-    color: ${theme.colors.error};
     margin-left: ${theme.spacings.xsmall};
     flex-shrink: 0;
-    border: 0;
     opacity: 0;
-    background: none;
-    cursor: pointer;
     z-index: 10;
     transform: translateX(-40%);
-
-    & * {
-      cursor: pointer;
-    }
   `}
 `;

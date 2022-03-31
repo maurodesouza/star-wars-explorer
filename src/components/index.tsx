@@ -1,6 +1,7 @@
 export * from './container';
 export * from './helpers';
 export * from './animation';
+export * from './favorite-handle';
 export * from './logo';
 export * from './image';
 export * from './heading';
