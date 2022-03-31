@@ -21,7 +21,7 @@ describe('Utils', () => {
           Entities.STARSHIPS,
         ],
 
-        [Entities.FILMS, 'people'],
+        [Entities.FILMS, 'people', 'homeworld'],
 
         [Entities.FILMS, 'pilots'],
 

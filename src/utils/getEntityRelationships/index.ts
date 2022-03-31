@@ -20,7 +20,7 @@ const getEntityRelationships = (entity: Entities) => {
 
     [Entities.PLANETS]: [Entities.FILMS, 'residents'],
 
-    [Entities.SPECIES]: [Entities.FILMS, 'people'],
+    [Entities.SPECIES]: [Entities.FILMS, 'people', 'homeworld'],
 
     [Entities.STARSHIPS]: [Entities.FILMS, 'pilots'],
 
