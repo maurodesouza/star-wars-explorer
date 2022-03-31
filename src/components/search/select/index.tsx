@@ -34,8 +34,6 @@ const Select = () => {
   };
 
   const handleBlur = (event: FocusEvent) => {
-    console.log('esta caindo aqui', event);
-
     if (dropdownRef.current?.contains(event.relatedTarget as Node)) return;
 
     setIsDropdownOpen(false);
