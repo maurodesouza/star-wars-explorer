@@ -1,12 +1,16 @@
+import { useEffect } from 'react';
+
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 
 import { BaseTemplate } from 'templates';
 import { Animation, EntityInfo, Heading, ShowWhen } from 'components';
 
+import { capitalize } from 'utils';
+import { events } from 'app';
+
 import { Entity } from 'types';
 import * as S from './styles';
-import { capitalize } from 'utils';
 
 type EntityTemplateProps = Entity;
 
@@ -16,6 +20,10 @@ const EntityTemplate = (data: EntityTemplateProps) => {
   const title = isFallback
     ? 'We are setting up the page for you, wait!'
     : `${capitalize(data.entity)} - ${data.title}`;
+
+  useEffect(() => {
+    events.achievements.add(data);
+  }, [data]);
 
   return (
     <BaseTemplate>
