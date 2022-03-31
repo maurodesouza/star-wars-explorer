@@ -1,9 +1,7 @@
-import { useEffect, useState } from 'react';
-
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 
-import { ImageNotSupported as NoImageIcon } from '@styled-icons/material';
+import { Image } from 'components';
+import { slugfy } from 'utils';
 
 import { Entities } from 'types';
 import * as S from './styles';
@@ -16,34 +14,19 @@ export type CardProps = {
 };
 
 const Card = ({ entity = Entities.CHARACTERS, image, label }: CardProps) => {
-  const { push } = useRouter();
+  const router = useRouter();
 
-  const [noHasImage, setNoNasImage] = useState(false);
+  const handleRedirect = async (e: React.MouseEvent) => {
+    e.preventDefault();
 
-  useEffect(() => {
-    setNoNasImage(false);
-  }, [image]);
+    router.push(href);
+  };
+
+  const href = `/universe/${entity}/${slugfy(label)}`;
 
   return (
-    <S.Container onClick={() => push(`/${entity}/${label}`)}>
-      {!noHasImage ? (
-        <Image
-          onError={() => setNoNasImage(true)}
-          src={image}
-          layout="fill"
-          objectFit="cover"
-          alt={label}
-        />
-      ) : (
-        <S.Wrapper>
-          <NoImageIcon size={56} />
-          <S.Text>
-            Image
-            <br />
-            no found
-          </S.Text>
-        </S.Wrapper>
-      )}
+    <S.Container role="link" onClick={handleRedirect}>
+      <Image image={image} alt={label} />
 
       <S.Content>
         <S.Label>{label}</S.Label>
