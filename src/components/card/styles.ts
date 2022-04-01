@@ -41,6 +41,8 @@ export const Container = styled.div`
   `}
 `;
 
+export const Hide = styled.a``;
+
 export const Content = styled.div`
   ${({ theme }) => css`
     width: 100%;

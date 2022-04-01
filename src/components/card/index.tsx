@@ -1,5 +1,7 @@
 import { TouchEvent, useEffect, useRef, useState } from 'react';
+
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 import { Image, FavoriteHandle } from 'components';
 import { slugfy } from 'utils';
@@ -79,6 +81,10 @@ const Card = (data: CardProps) => {
       onTouchEnd={onTouch}
       onTouchMove={() => !isDragging && setIsDragging(true)}
     >
+      <Link href={href} passHref>
+        <S.Hide />
+      </Link>
+
       <Image image={image} alt={title} />
 
       <S.Content>
