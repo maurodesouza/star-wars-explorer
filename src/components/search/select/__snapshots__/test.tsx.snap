@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Select /> should render the select styles correct 1`] = `
+.c2 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.c0 {
+  background-color: #FFE81F;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 0.8rem 0 0 0.8rem;
+  position: relative;
+  -webkit-transition: filter 0.2s;
+  transition: filter 0.2s;
+  color: #000;
+  padding-inline: calc(1.2rem);
+  width: 65%;
+}
+
+.c1 {
+  width: 100%;
+  border: 0;
+  background: none;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: inherit;
+}
+
+.c1::-webkit-input-placeholder {
+  color: inherit;
+}
+
+.c1::-moz-placeholder {
+  color: inherit;
+}
+
+.c1:-ms-input-placeholder {
+  color: inherit;
+}
+
+.c1::placeholder {
+  color: inherit;
+}
+
+.c3 {
+  width: 1.2rem;
+  height: 1.2rem;
+  position: relative;
+  top: 2px;
+}
+
+.c4 {
+  z-index: 50;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 1.2rem);
+  width: 100%;
+  background: #FFF;
+  border-radius: 0.8rem;
+  border-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: auto;
+  max-height: 20rem;
+  opacity: 0;
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+.c4::-webkit-scrollbar-track {
+  background: #FFF;
+  border-radius: 0 0.8rem 0.8rem 0;
+}
+
+.c4::-webkit-scrollbar-thumb {
+  border-radius: 0 calc(0.8rem / 2) calc(0.8rem / 2) 0;
+}
+
+.c5 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 100%;
+  padding: calc(1.2rem / 2) 1.2rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  background: #FFF;
+  color: #000;
+  border: none;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.c5:hover {
+  -webkit-filter: brightness(90%);
+  filter: brightness(90%);
+}
+
+@media (min-width:450px) {
+  .c0 {
+    width: 50%;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    padding: 0 2.4rem;
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c3 {
+    width: 1.6rem;
+    height: 1.6rem;
+    top: 4px;
+  }
+}
+
+@media (min-width:768px) {
+  .c5 {
+    padding: 1.2rem 3.2rem;
+    font-size: 1.6rem;
+  }
+}
+
+<div
+  class="c0"
+>
+  <input
+    aria-label="Open drop down select"
+    class="c1"
+    placeholder="characters"
+  />
+  <svg
+    aria-hidden="true"
+    class="c2 c3"
+    fill="currentColor"
+    focusable="false"
+    viewBox="0 0 320 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M285.476 272.971 91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+      fill="currentColor"
+    />
+  </svg>
+  <div
+    aria-hidden="true"
+    aria-label="drop down select"
+    class="c4"
+  >
+    <button
+      class="c5"
+    >
+      characters
+    </button>
+    <button
+      class="c5"
+    >
+      films
+    </button>
+    <button
+      class="c5"
+    >
+      species
+    </button>
+    <button
+      class="c5"
+    >
+      starships
+    </button>
+    <button
+      class="c5"
+    >
+      vehicles
+    </button>
+    <button
+      class="c5"
+    >
+      planets
+    </button>
+  </div>
+</div>
+`;
