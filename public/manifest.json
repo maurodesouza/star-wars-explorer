@@ -1,6 +1,6 @@
 {
-  "name": "React Avançado - Boilerplate",
-  "short_name": "React Avançado",
+  "name": "Start Wars Explorer",
+  "short_name": "Start Wars Explorer",
   "icons": [
     {
       "src": "/images/icon-192.png",
@@ -13,9 +13,9 @@
       "sizes": "512x512"
     }
   ],
-  "background_color": "#06092B",
-  "description": "Boilerlate utilizando Typescript, React, NextJS e Styled Components!",
+  "background_color": "#000",
+  "description": "Explore the Star Wars Universe with this awesome app",
   "display": "fullscreen",
   "start_url": "/",
-  "theme_color": "#06092B"
+  "theme_color": "#FFE81F"
 }
