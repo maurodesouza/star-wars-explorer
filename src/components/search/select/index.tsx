@@ -74,7 +74,7 @@ const Select = () => {
       >
         {!!filteredOptions.length ? (
           filteredOptions.map(option => (
-            <S.Option key={option} onClick={handleSelect(option)}>
+            <S.Option key={option} type="button" onClick={handleSelect(option)}>
               {option}
             </S.Option>
           ))
