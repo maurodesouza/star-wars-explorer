@@ -26,14 +26,12 @@ export default {
   },
 
   args: {
-    options: [],
+    options: Object.values(Entities),
   },
 } as Meta<StoryRelationsListFilter>;
 
 export const Basic: Story<StoryRelationsListFilter> = args => {
-  console.log(args.options);
-
-  events.relations['set.options'](args.options);
+  setTimeout(() => events.relations['set.options'](args.options), 100);
 
   return <RelationsListFilter />;
 };
