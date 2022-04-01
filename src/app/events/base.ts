@@ -3,7 +3,7 @@ import { Events } from 'types';
 
 class BaseEventHandle {
   protected emit(event: Events, payload?: unknown) {
-    const isDev = config.envs.environment !== 'development';
+    const isDev = config.envs.environment === 'development';
 
     isDev && console.info(`events[emit]: ${event}`, payload);
 
