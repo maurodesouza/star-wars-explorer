@@ -1,7 +1,7 @@
 import axios from 'axios';
+
 import { SWAPIEntity } from 'types';
-import { getEntityDataFromUrl } from 'utils/getEntityDataFromUrl';
-import { getImageUrl } from 'utils/getImageUrl';
+import { getEntityDataFromUrl, getImageUrl } from 'utils';
 
 const populateEntityRelationships = async (urls: string[]) => {
   const results = await Promise.all(
