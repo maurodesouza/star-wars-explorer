@@ -65,7 +65,7 @@ const Card = (data: CardProps) => {
   };
 
   const onTouchEnd = (e: TouchEvent) => {
-    if (containerRef.current!.contains(e.target as Node)) return;
+    if (containerRef.current?.contains(e.target as Node)) return;
 
     handleRemoveFocused();
   };
