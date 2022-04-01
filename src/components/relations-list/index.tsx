@@ -1,42 +1,76 @@
-import { CardList, CardListProps } from 'components/card-list';
-import { Entities, Entity } from 'types';
+import { useEffect, useState, useMemo } from 'react';
 
+import { CardList, CardListProps } from 'components';
+import { events } from 'app';
+
+import { Entities, Entity, Events } from 'types';
 import * as S from './styles';
+import { RelationsListFilter } from 'components/relations-list-filter';
 
 export type RelationsListProps = {
   relations: CardListProps['items'];
+  filter?: boolean;
 };
 
-const RelationsList = ({ relations = [] }: RelationsListProps) => {
-  const entities = relations.reduce((obj, item) => {
-    const key = item.entity;
-    const entities = obj[key] || [];
+const RelationsList = ({
+  relations = [],
+  filter = true,
+}: RelationsListProps) => {
+  const [filterBy, setFilterBy] = useState('');
 
-    obj[key] = [...entities, item];
+  const entities = useMemo(() => {
+    return relations.reduce((obj, item) => {
+      const key = item.entity;
 
-    return obj;
-  }, {} as Record<Entities, (Entity & { empty?: boolean })[]>);
+      const entities = obj[key] || [];
+
+      obj[key] = [...entities, item];
+
+      return obj;
+    }, {} as Record<Entities, (Entity & { empty?: boolean })[]>);
+  }, []);
+
+  const handleFilter = (event: CustomEvent<string>) =>
+    setFilterBy(event.detail);
+
+  useEffect(() => {
+    events.on(Events.RELATIONS_FILTER, handleFilter);
+
+    return () => {
+      events.off(Events.RELATIONS_FILTER, handleFilter);
+    };
+  }, []);
+
+  useEffect(() => {
+    events.relations['set.options'](Object.keys(entities));
+  }, [entities]);
 
   return (
     <S.Container>
-      {Object.entries(entities).map(([key, items]) => {
-        const total = items.length;
-        const emptyCount = items.filter(item => !!item.empty).length;
+      {filter && <RelationsListFilter />}
 
-        const hasEmpty = !!emptyCount;
-        const finded = items.length - emptyCount;
+      <S.Wrapper>
+        {Object.entries(entities).map(([key, items]) => {
+          if (!!filterBy && key !== filterBy) return null;
 
-        const label = `${key} (${
-          hasEmpty && finded ? `${finded}/` : ''
-        }${total})`;
+          const total = items.length;
+          const emptyCount = items.filter(item => !!item.empty).length;
 
-        return (
-          <S.Wrapper key={key}>
-            <S.Label>{label}</S.Label>
-            <CardList items={items} />
-          </S.Wrapper>
-        );
-      })}
+          const hasEmpty = !!emptyCount;
+          const finded = items.length - emptyCount;
+
+          const label = `${key} (${
+            hasEmpty && finded ? `${finded}/` : ''
+          }${total})`;
+
+          return (
+            <S.Box key={key}>
+              <S.Label>{label}</S.Label>
+              <CardList items={items} />
+            </S.Box>
+          );
+        })}
+      </S.Wrapper>
     </S.Container>
   );
 };
