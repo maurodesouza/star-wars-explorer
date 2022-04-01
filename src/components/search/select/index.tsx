@@ -60,11 +60,17 @@ const Select = () => {
         onInput={debounce(forceUpdate, 200)}
         onFocus={handleOpenDropdown}
         onBlur={handleBlur}
+        aria-label="Open drop down select"
       />
 
       <S.ChevronRightIcon />
 
-      <S.Dropdown ref={dropdownRef} open={isDropdownOpen}>
+      <S.Dropdown
+        ref={dropdownRef}
+        open={isDropdownOpen}
+        aria-hidden={!isDropdownOpen}
+        aria-label="drop down select"
+      >
         {!!filteredOptions.length ? (
           filteredOptions.map(option => (
             <S.Option key={option} onClick={handleSelect(option)}>
