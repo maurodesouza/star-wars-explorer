@@ -26,16 +26,20 @@ const FavoriteHandle = (data: FavoriteHandleProps) => {
     events.favorites.remove(data.id);
   };
 
+  const onMouseUp = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
+
   const isFavorite = favorites.find(item => item.id === data.id);
 
   return (
     <>
       {isFavorite ? (
-        <S.Container onClick={handleRemoveFromFavorites}>
+        <S.Container onClick={handleRemoveFromFavorites} onMouseUp={onMouseUp}>
           <FavoriteIcon aria-label="Remove hero to favorites" />
         </S.Container>
       ) : (
-        <S.Container onClick={handleAddToFavorites}>
+        <S.Container onClick={handleAddToFavorites} onMouseUp={onMouseUp}>
           <FavoteBorderIcon aria-label="Add hero to favorites" />
         </S.Container>
       )}
