@@ -29,7 +29,7 @@ const RelationsListFilter = () => {
     };
   }, []);
 
-  return (
+  return options.length ? (
     <S.Container>
       <S.Label>Filter by</S.Label>
 
@@ -45,7 +45,7 @@ const RelationsListFilter = () => {
         ))}
       </S.Content>
     </S.Container>
-  );
+  ) : null;
 };
 
 export { RelationsListFilter };
