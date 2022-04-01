@@ -1,6 +1,6 @@
 import {
   Favorite as FavoriteIcon,
-  FavoriteBorder as FavoteBorderIcon,
+  FavoriteBorder as FavoriteFilledIcon,
 } from '@styled-icons/material';
 
 import { events } from 'app';
@@ -40,7 +40,7 @@ const FavoriteHandle = (data: FavoriteHandleProps) => {
         </S.Container>
       ) : (
         <S.Container onClick={handleAddToFavorites} onMouseUp={onMouseUp}>
-          <FavoteBorderIcon aria-label="Add to favorites" />
+          <FavoriteFilledIcon aria-label="Add to favorites" />
         </S.Container>
       )}
     </>
