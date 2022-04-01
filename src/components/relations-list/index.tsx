@@ -42,7 +42,7 @@ const RelationsList = ({
 
   useEffect(() => {
     events.relations['set.options'](Object.keys(entities));
-  }, [entities]);
+  }, [entities, filter]);
 
   return (
     <S.Container>
