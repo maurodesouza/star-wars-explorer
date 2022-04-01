@@ -5,8 +5,12 @@ import { EmptyCard, EmptyCardProps } from '.';
 export default {
   title: 'Card/Empty',
   component: EmptyCard,
+
   parameters: {
     layout: 'fullscreen',
+  },
+  args: {
+    id: '1',
   },
 } as Meta<EmptyCardProps>;
 
