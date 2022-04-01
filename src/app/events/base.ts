@@ -1,8 +1,10 @@
+import { config } from 'app';
 import { Events } from 'types';
 
+const isDev = config.envs.environment === 'development';
 class BaseEventHandle {
   protected emit(event: Events, payload?: unknown) {
-    console.info(`events[emit]: ${event}`, payload);
+    isDev && console.info(`events[emit]: ${event}`, payload);
 
     const customEvent = new CustomEvent(event, { detail: payload });
     document.dispatchEvent(customEvent);
