@@ -12,7 +12,7 @@ export const Container = styled.div`
 
 export const Title = styled.h2`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.large};
+    font-size: calc(${theme.font.sizes.medium} * 2);
     width: 100%;
     text-align: center;
   `}
