@@ -1,4 +1,4 @@
-import { FocusEvent, useRef, useState } from 'react';
+import { FocusEvent, useRef, useState, MouseEvent } from 'react';
 
 import { events } from 'app';
 import { useForceUpdate } from 'hooks';
@@ -24,9 +24,10 @@ const Select = () => {
 
   const clearInputValue = () => (inputRef.current!.value = '');
 
-  const handleSelect = (option: Entities) => () => {
-    setSelectedOption(option);
+  const handleSelect = (option: Entities) => (e: MouseEvent) => {
+    e.stopPropagation();
 
+    setSelectedOption(option);
     setIsDropdownOpen(false);
 
     events.search.make({ entity: option });
