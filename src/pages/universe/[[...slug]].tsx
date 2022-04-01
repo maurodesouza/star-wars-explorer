@@ -16,10 +16,14 @@ type Params = {
   slug: [Entities, string];
 };
 
-type EntityProps = EntityType;
+type Response = EntityType & {
+  slug: string;
+};
 
-const Entity = (props: EntityProps) => {
-  return <EntityTemplate {...props} />;
+type EntityProps = Response;
+
+const Entity = ({ slug, ...rest }: EntityProps) => {
+  return <EntityTemplate key={slug} {...rest} />;
 };
 
 export default Entity;
@@ -31,9 +35,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<EntityType> = async ({
-  params,
-}) => {
+export const getStaticProps: GetStaticProps<Response> = async ({ params }) => {
   const queries = (params as Params).slug;
   const [entity = '', slug = ''] = queries;
 
@@ -109,6 +111,7 @@ export const getStaticProps: GetStaticProps<EntityType> = async ({
         image,
         extras: finded,
         relations,
+        slug,
       },
     };
   } catch (err) {
