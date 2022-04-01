@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RelationsList /> should render the empty card styles correct 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 2.4rem;
+  width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.c2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.c3 {
+  font-size: 2.4rem;
+  text-transform: capitalize;
+}
+
+<div
+  class="c0"
+>
+  <div
+    data-testid="relations list filter"
+  />
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      <h4
+        class="c3"
+      >
+        characters (1)
+      </h4>
+      <div
+        data-testid="card list"
+      />
+    </div>
+    <div
+      class="c2"
+    >
+      <h4
+        class="c3"
+      >
+        films (1)
+      </h4>
+      <div
+        data-testid="card list"
+      />
+    </div>
+  </div>
+</div>
+`;
