@@ -1,11 +1,10 @@
 import { useEffect, useState, useMemo } from 'react';
 
-import { CardList, CardListProps } from 'components';
+import { CardList, CardListProps, RelationsListFilter } from 'components';
 import { events } from 'app';
 
 import { Entities, Entity, Events } from 'types';
 import * as S from './styles';
-import { RelationsListFilter } from 'components/relations-list-filter';
 
 export type RelationsListProps = {
   relations: CardListProps['items'];
