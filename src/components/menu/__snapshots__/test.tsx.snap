@@ -106,7 +106,7 @@ exports[`<Menu /> should render the menu styles correct 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
-  padding: 0 2.4rem 0;
+  padding: 0 2.4rem 2.4rem;
   z-index: 20;
 }
 
@@ -177,7 +177,7 @@ exports[`<Menu /> should render the menu styles correct 1`] = `
 
   .c4 + .c4 {
     margin-top: 0;
-    margin-left: calc(4.0rem * 2);
+    margin-left: calc(4.0rem);
   }
 
   .c5::after {
@@ -260,6 +260,18 @@ exports[`<Menu /> should render the menu styles correct 1`] = `
     >
       Explore
     </a>
+    <a
+      class="c4 c5"
+      href="/achievements"
+    >
+      Achievements
+    </a>
+    <a
+      class="c4 c5"
+      href="/favorites"
+    >
+      Favorites
+    </a>
   </nav>
   <div
     class="c6 c7"
@@ -315,6 +327,18 @@ exports[`<Menu /> should render the menu styles correct 1`] = `
         href="/"
       >
         Explore
+      </a>
+      <a
+        class="c4 c5"
+        href="/achievements"
+      >
+        Achievements
+      </a>
+      <a
+        class="c4 c5"
+        href="/favorites"
+      >
+        Favorites
       </a>
     </nav>
     <footer
