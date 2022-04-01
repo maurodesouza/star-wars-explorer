@@ -41,7 +41,9 @@ export const Container = styled.div`
   `}
 `;
 
-export const Hide = styled.a``;
+export const Hide = styled.a`
+  pointer-events: none;
+`;
 
 export const Content = styled.div`
   ${({ theme }) => css`
