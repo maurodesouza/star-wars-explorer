@@ -6,4 +6,7 @@ export enum Events {
   REMOVE_FAVORITE = 'app.favorites.remove',
 
   ADD_ACHIEVEMENT = 'app.achievement.add',
+
+  RELATIONS_FILTER = 'app.relations.filter',
+  RELATIONS_FILTER_OPTIONS = 'app.relations.filter.options',
 }
