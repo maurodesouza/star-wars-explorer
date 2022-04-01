@@ -1,4 +1,4 @@
-import { FocusEvent, useRef, useState, MouseEvent } from 'react';
+import { useRef, useState, MouseEvent } from 'react';
 
 import { events } from 'app';
 import { useForceUpdate } from 'hooks';
@@ -34,9 +34,7 @@ const Select = () => {
     setTimeout(() => clearInputValue(), 200);
   };
 
-  const handleBlur = (event: FocusEvent) => {
-    if (dropdownRef.current?.contains(event.relatedTarget as Node)) return;
-
+  const handleBlur = () => {
     setIsDropdownOpen(false);
     clearInputValue();
   };
