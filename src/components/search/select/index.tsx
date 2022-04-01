@@ -22,7 +22,8 @@ const Select = () => {
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const clearInputValue = () => (inputRef.current!.value = '');
+  const clearInputValue = () =>
+    !!inputRef.current && (inputRef.current.value = '');
 
   const handleSelect = (option: Entities) => (e: MouseEvent) => {
     e.stopPropagation();
