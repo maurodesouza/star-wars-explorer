@@ -188,31 +188,37 @@ exports[`<Select /> should render the select styles correct 1`] = `
   >
     <button
       class="c5"
+      type="button"
     >
       characters
     </button>
     <button
       class="c5"
+      type="button"
     >
       films
     </button>
     <button
       class="c5"
+      type="button"
     >
       species
     </button>
     <button
       class="c5"
+      type="button"
     >
       starships
     </button>
     <button
       class="c5"
+      type="button"
     >
       vehicles
     </button>
     <button
       class="c5"
+      type="button"
     >
       planets
     </button>
