@@ -36,11 +36,11 @@ const FavoriteHandle = (data: FavoriteHandleProps) => {
     <>
       {isFavorite ? (
         <S.Container onClick={handleRemoveFromFavorites} onMouseUp={onMouseUp}>
-          <FavoriteIcon aria-label="Remove hero to favorites" />
+          <FavoriteIcon aria-label="Remove to favorites" />
         </S.Container>
       ) : (
         <S.Container onClick={handleAddToFavorites} onMouseUp={onMouseUp}>
-          <FavoteBorderIcon aria-label="Add hero to favorites" />
+          <FavoteBorderIcon aria-label="Add to favorites" />
         </S.Container>
       )}
     </>
