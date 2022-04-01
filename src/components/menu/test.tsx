@@ -1,4 +1,4 @@
-import { fireEvent, screen } from '@testing-library/react';
+import { fireEvent, screen, act } from '@testing-library/react';
 import { renderWithProviders } from 'utils/test/helpers';
 
 import { Menu } from '.';
@@ -32,12 +32,16 @@ describe('<Menu />', () => {
     expect(fullMenuElement.getAttribute('aria-hidden')).toBe('true');
     expect(fullMenuElement).toHaveStyle({ opacity: 0 });
 
-    fireEvent.click(openMenuElement);
+    act(() => {
+      fireEvent.click(openMenuElement);
+    });
 
     expect(fullMenuElement.getAttribute('aria-hidden')).toBe('false');
     expect(fullMenuElement).toHaveStyle({ opacity: 1 });
 
-    fireEvent.click(closeMenuElement);
+    act(() => {
+      fireEvent.click(closeMenuElement);
+    });
 
     expect(fullMenuElement.getAttribute('aria-hidden')).toBe('true');
     expect(fullMenuElement).toHaveStyle({ opacity: 0 });
