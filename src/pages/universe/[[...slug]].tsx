@@ -120,6 +120,8 @@ export const getStaticProps: GetStaticProps<Response> = async ({ params }) => {
 
     fieldsToExclude.forEach(field => Reflect.deleteProperty(finded, field));
 
+    console.info(`generate page for slug /${slug}`);
+
     return {
       props: {
         id,
