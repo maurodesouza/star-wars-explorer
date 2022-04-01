@@ -40,9 +40,7 @@ const Card = (data: CardProps) => {
   };
 
   const onMouseUp = () => {
-    if (isTouchscreen) {
-      return;
-    }
+    if (isTouchscreen) return;
 
     handleRedirect();
   };
