@@ -1,4 +1,6 @@
 const envs = {
+  environment: process.env.NODE_ENV,
+
   urls: {
     api: {
       swapi: process.env.SWAPI_API_URL!,
