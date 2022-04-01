@@ -99,6 +99,16 @@ export const Dropdown = styled.div<DropdownProps>`
     transition: 0.2s;
     pointer-events: none;
 
+    &::-webkit-scrollbar-track {
+      background: ${theme.colors.white};
+      border-radius: 0 ${theme.border.radius} ${theme.border.radius} 0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 0 calc(${theme.border.radius} / 2)
+        calc(${theme.border.radius} / 2) 0;
+    }
+
     ${open && dropdownModifiers.open};
   `}
 `;

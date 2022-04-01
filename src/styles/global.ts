@@ -38,6 +38,20 @@ const GlobalStyles = createGlobalStyle`
   }
 
   ${({ theme }) => css`
+    * {
+      &::-webkit-scrollbar {
+        width: 1.2rem;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: ${theme.colors.bg};
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: ${theme.colors.primary};
+      }
+    }
+
     body,
     button,
     input,
