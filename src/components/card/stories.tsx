@@ -27,13 +27,23 @@ export default {
 } as Meta<CardProps>;
 
 export const Basic: Story<CardProps> = args => (
-  <>
+  <div
+    style={{
+      width: '100%',
+      maxWidth: '840px',
+      marginInline: 'auto',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: 40,
+    }}
+  >
     <div style={{ width: '100%', maxWidth: '19rem' }}>
       <Card {...args} />
     </div>
 
-    <div style={{ width: '100%', maxWidth: '19rem', marginTop: 40 }}>
+    <div style={{ width: '100%', maxWidth: '19rem' }}>
       <Card {...args} image="" />
     </div>
-  </>
+  </div>
 );
