@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 import { useRouter } from 'next/router';
 import Head from 'next/head';
@@ -23,6 +24,8 @@ const EntityTemplate = (data: EntityTemplateProps) => {
 
   useEffect(() => {
     events.achievements.add(data);
+
+    toast.dismiss();
   }, [data]);
 
   return (

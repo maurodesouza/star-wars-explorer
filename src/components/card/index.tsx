@@ -1,4 +1,5 @@
 import { TouchEvent, useEffect, useRef, useState } from 'react';
+import { toast } from 'react-toastify';
 
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -23,11 +24,20 @@ const Card = (data: CardProps) => {
   const router = useRouter();
 
   const [isTouchscreen, setIsTouchscreen] = useState(false);
+  const timeoutIdRef = useRef<NodeJS.Timeout>();
 
   const [isDragging, setIsDragging] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
 
-  const handleRedirect = () => router.push(href);
+  const handleRedirect = () => {
+    const id = setTimeout(() => {
+      toast.loading('We are setting up the page for you, wait!');
+    }, 2000);
+
+    timeoutIdRef.current = id;
+
+    router.push(href);
+  };
 
   const onMouseUp = () => {
     if (isTouchscreen) {
@@ -69,6 +79,10 @@ const Card = (data: CardProps) => {
 
   useEffect(() => {
     setIsTouchscreen(!!window.matchMedia('(any-pointer: coarse)').matches);
+
+    return () => {
+      clearTimeout(timeoutIdRef.current as unknown as number);
+    };
   }, []);
 
   const href = `/universe/${entity}/${slugfy(title)}`;
