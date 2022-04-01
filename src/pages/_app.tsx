@@ -1,9 +1,10 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
+import { ToastContainer, toast } from 'react-toastify';
 import { ThemeProvider } from 'styled-components';
-import { Provider } from 'context';
 
+import { Provider } from 'context';
 import { GlobalStyles, theme } from 'styles';
 
 const App = ({ Component, pageProps }: AppProps) => {
@@ -23,6 +24,11 @@ const App = ({ Component, pageProps }: AppProps) => {
 
       <Provider>
         <Component {...pageProps} />
+        <ToastContainer
+          autoClose={false}
+          theme="dark"
+          position={toast.POSITION.BOTTOM_RIGHT}
+        />
       </Provider>
     </ThemeProvider>
   );
