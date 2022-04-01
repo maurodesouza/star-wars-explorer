@@ -1,4 +1,4 @@
-import './next-image.mock'
+import '../.jest/next-image.mock'
 
 import { ThemeProvider } from 'styled-components';
 import { RouterContext } from "next/dist/shared/lib/router-context";
