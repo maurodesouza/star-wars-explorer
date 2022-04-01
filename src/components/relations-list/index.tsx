@@ -7,7 +7,7 @@ import { Entities, Entity, Events } from 'types';
 import * as S from './styles';
 
 export type RelationsListProps = {
-  relations: CardListProps['items'];
+  relations?: CardListProps['items'];
   filter?: boolean;
 };
 
@@ -44,7 +44,7 @@ const RelationsList = ({
     events.relations['set.options'](Object.keys(entities));
   }, [entities, filter]);
 
-  return (
+  return relations.length ? (
     <S.Container>
       {filter && <RelationsListFilter />}
 
@@ -71,7 +71,7 @@ const RelationsList = ({
         })}
       </S.Wrapper>
     </S.Container>
-  );
+  ) : null;
 };
 
 export { RelationsList };
