@@ -9,13 +9,20 @@ export default {
   parameters: {
     layout: 'fullscreen',
   },
+
   args: {
     id: '1',
   },
 } as Meta<EmptyCardProps>;
 
 export const Basic: Story<EmptyCardProps> = args => (
-  <div style={{ width: '100%', maxWidth: '19rem' }}>
+  <div
+    style={{
+      width: '100%',
+      maxWidth: '19rem',
+      marginInline: 'auto',
+    }}
+  >
     <EmptyCard {...args} />
   </div>
 );
