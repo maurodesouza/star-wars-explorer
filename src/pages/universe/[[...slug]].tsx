@@ -3,6 +3,8 @@ import { swapiApi } from 'services';
 
 import { EntityTemplate } from 'templates';
 import { Entities, Entity as EntityType, SWAPIGetAllResponse } from 'types';
+import { config } from 'app';
+
 import {
   getEndpointEntityPath,
   getEntityDataFromUrl,
@@ -33,24 +35,16 @@ const Entity = ({ slug, ...rest }: EntityProps) => {
 export default Entity;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const preBuild = {
-    [Entities.FILMS]: [
-      'a-new-hope',
-      'the-empire-strikes-back',
-      'return-of-the-jedi',
-      'the-phantom-menace',
-      'attack-of-the-clones',
-      'revenge-of-the-sith',
-    ],
-  };
+  const paths = Object.entries(config['pre-build']).reduce(
+    (arr, [entity, slugs]) => {
+      const paths = slugs.map(slug => ({
+        params: { slug: [entity, slug] as [Entities, string] },
+      }));
 
-  const paths = Object.entries(preBuild).reduce((arr, [entity, slugs]) => {
-    const paths = slugs.map(slug => ({
-      params: { slug: [entity, slug] as [Entities, string] },
-    }));
-
-    return [...arr, ...paths];
-  }, [] as Path[]);
+      return [...arr, ...paths];
+    },
+    [] as Path[]
+  );
 
   return {
     paths,

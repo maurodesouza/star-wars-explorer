@@ -29,6 +29,17 @@ const config = {
       count: 60,
     },
   },
+
+  'pre-build': {
+    [Entities.FILMS]: [
+      'a-new-hope',
+      'the-empire-strikes-back',
+      'return-of-the-jedi',
+      'the-phantom-menace',
+      'attack-of-the-clones',
+      'revenge-of-the-sith',
+    ],
+  },
 };
 
 export { config };
