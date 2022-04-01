@@ -82,6 +82,7 @@ const Card = (data: CardProps) => {
 
     return () => {
       clearTimeout(timeoutIdRef.current as unknown as number);
+      events.off('touchend', onTouchEnd);
     };
   }, []);
 
