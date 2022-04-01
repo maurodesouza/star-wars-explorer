@@ -3,8 +3,10 @@ import './next-image.mock'
 import { ThemeProvider } from 'styled-components';
 import { RouterContext } from "next/dist/shared/lib/router-context";
 
-import { GlobalStyles, theme } from 'styles';
 import { Gap } from 'components';
+import { Provider } from 'context';
+
+import { GlobalStyles, theme } from 'styles';
 
 export const parameters = {
   nextRouter: {
@@ -27,11 +29,14 @@ export const parameters = {
 export const decorators = [
   (Story) => (
     <ThemeProvider theme={theme}>
+      <Provider>
         <div style={{ height: '100%', paddingBlock: theme.grid.gutter }}>
           <Gap>
             <Story />
           </Gap>
         </div>
+      </Provider>
+
       <GlobalStyles />
     </ThemeProvider>
   ),
