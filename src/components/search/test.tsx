@@ -1,12 +1,10 @@
 import { act, screen, fireEvent } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-
 import { renderWithProviders } from 'utils/test/helpers';
 
 import { events } from 'app';
-import { sleep } from 'utils';
-
 import { Search, SearchProps } from '.';
+
+jest.useFakeTimers();
 
 jest.mock('./select', () => ({
   __esModule: true,
@@ -23,6 +21,7 @@ const searchProps: Required<SearchProps> = {
 describe('<Search />', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    jest.clearAllTimers();
   });
 
   it('should render the search correct', () => {
@@ -59,12 +58,21 @@ describe('<Search />', () => {
     const searchMakeEventFn = jest.spyOn(events.search, 'make');
     const text = 'some value';
 
+    searchMakeEventFn.mockImplementation(() => null);
+
     renderWithProviders(<Search {...searchProps} />);
 
-    const input = screen.getByPlaceholderText(searchProps.placeholder);
+    const input = screen.getByPlaceholderText(
+      searchProps.placeholder
+    ) as HTMLInputElement;
 
-    userEvent.type(input, text);
-    await sleep(400);
+    input.value = text;
+
+    act(() => {
+      fireEvent.input(input);
+    });
+
+    jest.runAllTimers();
 
     expect(searchMakeEventFn).toBeCalledWith({ search: text });
     expect(searchMakeEventFn).toBeCalledTimes(1);
