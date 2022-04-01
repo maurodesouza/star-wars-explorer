@@ -11,4 +11,8 @@ export default {
   },
 } as Meta<ShowWhenProps>;
 
-export const Basic: Story<ShowWhenProps> = args => <ShowWhen {...args} />;
+export const Basic: Story<ShowWhenProps> = args => (
+  <div style={{ fontSize: 40 }}>
+    <ShowWhen {...args} />
+  </div>
+);
