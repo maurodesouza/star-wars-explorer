@@ -46,7 +46,7 @@ Para fazer o app utilizei o [Nextjs](https://nextjs.org) para criar toda a inter
 <details>
   <summary>Cypress testando a pagina de explorer</summary>
   <br>
-  
+
   https://user-images.githubusercontent.com/54520907/161361867-f5881930-437c-42d5-8900-4e1563925f3e.mp4
 </details>
 <br>
@@ -141,9 +141,15 @@ $ yarn dev
 - `lint`: roda o eslint na pasta src
 - `test`: roda os testes
 - `test:watch`: roda os testes no watch mode
+- `cy:open`: roda a interface do cypress
+- `cy:run`: roda o cypress pela cli
+- `test:e2e`: roda yarn dev + cy:open
+- `test:e2e:cli`: roda yarn dev + cy:run
 - `storybook`: inicia o storybook em `localhost:6006`
 - `build-storybook`: cria a build do storybook
 - `generate`: cria a estrutura padrão de um componente
+
+*OBS: Antes de rodar algum comando do cypress, verifique se você possui os [pré requisitos necessários](https://docs.cypress.io/guides/getting-started/installing-cypress#System-requirements)*.
 
 &#xa0;
 
