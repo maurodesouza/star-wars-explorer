@@ -68,6 +68,10 @@ Para fazer o app utilizei o [Nextjs](https://nextjs.org) para criar toda a inter
   <img width="40" title="React Testing Library" alt="Logo do React Testing Library" src="https://testing-library.com/img/octopus-64x64.png">
 </a> &#xa0; &#xa0;
 
+<a href="https://www.cypress.io">
+  <img width="40" title="Cypress" alt="Logo do Cypress" src="https://github.com/maurodesouza/maurodesouza/raw/master/assets/cypress-logo.svg">
+</a> &#xa0; &#xa0;
+
 <a href="https://eslint.org">
   <img  width="40" title="Eslint" alt="Logo do Eslint" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/eslint/eslint.png">
 </a> &#xa0; &#xa0;
