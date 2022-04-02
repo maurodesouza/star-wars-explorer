@@ -10,3 +10,5 @@
 //
 
 import '@testing-library/cypress/add-commands';
+
+Cypress.Commands.add('getByDataCy', (selector, ...args) => cy.get(`[data-cy="${selector}"]`, ...args))
