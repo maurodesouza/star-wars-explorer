@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "title": "label 1",
+    "entity": "films",
+    "image": "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/films/1.jpg"
+  },
+  {
+    "id": "2",
+    "title": "label 2",
+    "entity": "films",
+    "image": "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/films/2.jpg"
+  },
+  {
+    "id": "3",
+    "title": "label 3",
+    "entity": "films",
+    "image": "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/films/3.jpg"
+  },
+  {
+    "id": "4",
+    "title": "label 4",
+    "entity": "films",
+    "image": "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/films/4.jpg"
+  },
+  {
+    "id": "5",
+    "title": "label 5",
+    "entity": "films",
+    "image": "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/films/5.jpg"
+  },
+  {
+    "id": "6",
+    "title": "label 6",
+    "entity": "films",
+    "image": "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/films/6.jpg"
+  }
+]

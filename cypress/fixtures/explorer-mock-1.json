@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "title": "label 1",
+    "entity": "characters",
+    "image": "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/characters/1.jpg"
+  },
+  {
+    "id": "2",
+    "title": "label 2",
+    "entity": "characters",
+    "image": "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/characters/2.jpg"
+  },
+  {
+    "id": "3",
+    "title": "label 3",
+    "entity": "characters",
+    "image": "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/characters/3.jpg"
+  },
+  {
+    "id": "4",
+    "title": "label 4",
+    "entity": "characters",
+    "image": "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/characters/4.jpg"
+  },
+  {
+    "id": "5",
+    "title": "label 5",
+    "entity": "characters",
+    "image": "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/characters/5.jpg"
+  },
+  {
+    "id": "6",
+    "title": "label 6",
+    "entity": "characters",
+    "image": "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/characters/6.jpg"
+  },
+  {
+    "id": "7",
+    "title": "label 7",
+    "entity": "characters",
+    "image": "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/characters/7.jpg"
+  },
+  {
+    "id": "8",
+    "title": "label 8",
+    "entity": "characters",
+    "image": "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/characters/8.jpg"
+  },
+  {
+    "id": "9",
+    "title": "label 9",
+    "entity": "characters",
+    "image": "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/characters/9.jpg"
+  },
+  {
+    "id": "10",
+    "title": "label 10",
+    "entity": "characters",
+    "image": "https://raw.githubusercontent.com/tbone849/star-wars-guide/master/build/assets/img/characters/10.jpg"
+  }
+]
