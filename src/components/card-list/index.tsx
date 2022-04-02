@@ -18,7 +18,7 @@ const CardList = ({ items = [] }: CardListProps) => {
   const needFill = lackForFill < 0;
 
   return (
-    <S.Container>
+    <S.Container data-cy="card list">
       {items.map(item => {
         const Item = item.empty ? EmptyCard : Card;
 
