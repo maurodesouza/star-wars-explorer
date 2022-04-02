@@ -21,6 +21,7 @@ export const Box = styled.div`
     width: min(100%, 30rem);
     aspect-ratio: 0.65;
     border-radius: ${theme.border.radius};
+    background: ${theme.colors.white};
     overflow: hidden;
     align-self: center;
     flex-shrink: 0;
