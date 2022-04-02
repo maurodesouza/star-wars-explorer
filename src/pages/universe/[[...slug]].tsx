@@ -99,6 +99,8 @@ export const getStaticProps: GetStaticProps<Response> = async ({ params }) => {
     const urls = relationships.reduce((arr, key) => {
       const item = finded[key];
 
+      if (!item) return arr;
+
       const result = Array.isArray(item) ? item : [item];
 
       return [...arr, ...result];
