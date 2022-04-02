@@ -42,6 +42,15 @@ O desafio consiste em criar um pequeno app utilizando a [API do Star Wars](https
 
 Para fazer o app utilizei o [Nextjs](https://nextjs.org) para criar toda a interface, [Storybook](https://storybook.js.org) para fazer a documentação dos componentes, e para os teste unitários [Jest](https://jestjs.io) com [Testing Library](https://testing-library.com/docs/dom-testing-library/intro/) e os e2e [Cypress](https://www.cypress.io), e tudo isso com [Typescript](https://www.typescriptlang.org) ❤
 
+####
+<details>
+  <summary>Cypress testando a pagina de explorer</summary>
+  <br>
+  
+  https://user-images.githubusercontent.com/54520907/161361867-f5881930-437c-42d5-8900-4e1563925f3e.mp4
+</details>
+<br>
+
 ## :rocket: Principais tecnologias ##
 
 <a href="https://nextjs.org">
