@@ -38,7 +38,7 @@
 
 O Star Wars Explorer é um projeto que foi desenvolvido para o desafio front end da [Mamboo](https://mamboo.co.ao)!
 
-O desafio consiste em criar um pequeno app utilizando a [API do Star Wars](https://swapi.dev) para que seja possível, pesquisar por algum personagem e ver mais informações sobre o ele, e poder salva-lo como favorito.
+O desafio consiste em criar um pequeno app utilizando a [API do Star Wars](https://swapi.dev) para que seja possível, pesquisar por algum personagem e ver mais informações sobre ele, e poder salva-lo como favorito.
 
 Para fazer o app utilizei o [Nextjs](https://nextjs.org) para criar toda a interface, [Storybook](https://storybook.js.org) para fazer a documentação dos componentes, e para os teste unitários [Jest](https://jestjs.io) com [Testing Library](https://testing-library.com/docs/dom-testing-library/intro/) e os e2e [Cypress](https://www.cypress.io), e tudo isso com [Typescript](https://www.typescriptlang.org) ❤
 
