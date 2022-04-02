@@ -150,7 +150,6 @@ $ yarn dev
 - `generate`: cria a estrutura padrão de um componente
 
 *OBS: Antes de rodar algum comando do cypress, verifique se você possui os [pré requisitos necessários](https://docs.cypress.io/guides/getting-started/installing-cypress#System-requirements)*.
-
 &#xa0;
 
 ## :memo: Licença ##
