@@ -9,6 +9,8 @@
     "lint": "eslint src",
     "test": "jest",
     "test:watch": "yarn test --watch",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook -s ./public",
     "generate": "plop --plopfile ./generators/plopfile.js"
@@ -48,6 +50,7 @@
     "babel-plugin-styled-components": "^2.0.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "cross-env": "^7.0.3",
+    "cypress": "^9.5.3",
     "eslint": "^7.32.0",
     "eslint-config-next": "^12.0.10",
     "eslint-config-prettier": "^8.3.0",
