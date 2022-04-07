@@ -2,8 +2,9 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { swapiApi } from 'services';
 
 import { EntityTemplate } from 'templates';
-import { Entities, Entity as EntityType, SWAPIGetAllResponse } from 'types';
+
 import { config } from 'app';
+import { Entities, Entity as EntityType, SWAPIGetAllResponse } from 'types';
 
 import {
   getEndpointEntityPath,
@@ -35,7 +36,7 @@ const Entity = ({ slug, ...rest }: EntityProps) => {
 export default Entity;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const isCi = process.env.CI === 'true';
+  const isCi = config.envs.ci;
 
   console.log('CI env', process.env.CI);
 
