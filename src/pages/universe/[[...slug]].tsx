@@ -35,16 +35,19 @@ const Entity = ({ slug, ...rest }: EntityProps) => {
 export default Entity;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = Object.entries(config['pre-build']).reduce(
-    (arr, [entity, slugs]) => {
-      const paths = slugs.map(slug => ({
-        params: { slug: [entity, slug] as [Entities, string] },
-      }));
+  const isCi = process.env.CI === 'true';
 
-      return [...arr, ...paths];
-    },
-    [] as Path[]
-  );
+  console.log('CI env', process.env.CI);
+
+  const paths = isCi
+    ? []
+    : Object.entries(config['pre-build']).reduce((arr, [entity, slugs]) => {
+        const paths = slugs.map(slug => ({
+          params: { slug: [entity, slug] as [Entities, string] },
+        }));
+
+        return [...arr, ...paths];
+      }, [] as Path[]);
 
   return {
     paths,
