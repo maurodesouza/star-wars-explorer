@@ -23,6 +23,4 @@ jobs:
         run: yarn test
 
       - name: Build
-        env:
-          SWAPI_API_URL: ${{ secrets.SWAPI_API_URL }}
         run: yarn build
