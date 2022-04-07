@@ -21,6 +21,7 @@ exports[`<CardList /> styles should render the card list styles correct 1`] = `
 
 <div
   class="c0"
+  data-cy="card list"
 >
   <div
     class="c1"
