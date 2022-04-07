@@ -1,5 +1,6 @@
 const envs = {
   environment: process.env.NODE_ENV,
+  ci: process.env.CI === 'true',
 
   urls: {
     api: {

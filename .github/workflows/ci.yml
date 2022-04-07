@@ -2,11 +2,16 @@ name: ci
 on: [pull_request]
 
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+
+      - name: Echo
+        env:
+          SWAPI_API_URL: ${{ secrets.SWAPI_API_URL }}
+        run: printenv SWAPI_API_URL
 
       - name: Setup Node
         uses: actions/setup-node@v1
@@ -23,4 +28,6 @@ jobs:
         run: yarn test
 
       - name: Build
+        env:
+          SWAPI_API_URL: ${{ secrets.SWAPI_API_URL }}
         run: yarn build
