@@ -38,8 +38,6 @@ export default Entity;
 export const getStaticPaths: GetStaticPaths = async () => {
   const isCi = config.envs.ci;
 
-  console.log('CI env', process.env.CI);
-
   const paths = isCi
     ? []
     : Object.entries(config['pre-build']).reduce((arr, [entity, slugs]) => {
