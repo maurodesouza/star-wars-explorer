@@ -11,7 +11,7 @@ jobs:
       - name: Echo
         env:
           SWAPI_API_URL: ${{ secrets.SWAPI_API_URL }}
-        run: echo "$SWAPI_API_URL"
+        run: printenv SWAPI_API_URL
 
       - name: Setup Node
         uses: actions/setup-node@v1
