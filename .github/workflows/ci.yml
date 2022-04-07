@@ -8,6 +8,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
+      - name: Echo
+        env:
+          SWAPI_API_URL: ${{ secrets.SWAPI_API_URL }}
+        run: echo "$SWAPI_API_URL"
+
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
