@@ -2,8 +2,9 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { swapiApi } from 'services';
 
 import { EntityTemplate } from 'templates';
-import { Entities, Entity as EntityType, SWAPIGetAllResponse } from 'types';
+
 import { config } from 'app';
+import { Entities, Entity as EntityType, SWAPIGetAllResponse } from 'types';
 
 import {
   getEndpointEntityPath,
@@ -35,16 +36,17 @@ const Entity = ({ slug, ...rest }: EntityProps) => {
 export default Entity;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = Object.entries(config['pre-build']).reduce(
-    (arr, [entity, slugs]) => {
-      const paths = slugs.map(slug => ({
-        params: { slug: [entity, slug] as [Entities, string] },
-      }));
+  const isCi = config.envs.ci;
 
-      return [...arr, ...paths];
-    },
-    [] as Path[]
-  );
+  const paths = isCi
+    ? []
+    : Object.entries(config['pre-build']).reduce((arr, [entity, slugs]) => {
+        const paths = slugs.map(slug => ({
+          params: { slug: [entity, slug] as [Entities, string] },
+        }));
+
+        return [...arr, ...paths];
+      }, [] as Path[]);
 
   return {
     paths,
