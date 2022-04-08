@@ -9,6 +9,7 @@ describe('Utils', () => {
         'Came-case Here',
         'FOO',
         'B r',
+        'text/here',
         'á é í ó ú',
       ];
 
@@ -18,6 +19,7 @@ describe('Utils', () => {
         'came-case-here',
         'foo',
         'b-r',
+        'text-here',
         'a-e-i-o-u',
       ];
 
