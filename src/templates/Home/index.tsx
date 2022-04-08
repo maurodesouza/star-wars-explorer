@@ -1,12 +1,19 @@
+import { useEffect } from 'react';
+
 import { BaseTemplate } from 'templates';
 import { Heading, Search, CardList, ShowWhen, Animation } from 'components';
 
 import { useSearch } from 'hooks';
+import { events } from 'app';
 
 import * as S from './styles';
 
 const HomeTemplate = () => {
   const { data, isFetching } = useSearch();
+
+  useEffect(() => {
+    events.visit_page.explorer();
+  }, []);
 
   return (
     <BaseTemplate>

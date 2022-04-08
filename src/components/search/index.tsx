@@ -34,13 +34,21 @@ const Search = ({
     handleSearch();
   };
 
+  const handleFill = (event: CustomEvent<{ search: string }>) => {
+    const { search } = event.detail;
+
+    inputRef.current!.value = search;
+  };
+
   const handleError = (event: CustomEvent<string>) => setError(event.detail);
 
   useEffect(() => {
     events.on(Events.SEARCH_ERROR, handleError);
+    events.on(Events.FILL_SEARCH, handleFill);
 
     return () => {
       events.off(Events.SEARCH_ERROR, handleError);
+      events.off(Events.FILL_SEARCH, handleFill);
     };
   }, []);
 

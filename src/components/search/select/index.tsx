@@ -1,11 +1,11 @@
-import { useRef, useState, MouseEvent, FocusEvent } from 'react';
+import { useRef, useState, MouseEvent, FocusEvent, useEffect } from 'react';
 
 import { events } from 'app';
 import { useForceUpdate } from 'hooks';
 
 import { debounce, filterArrayByQueryMatch } from 'utils';
 
-import { Entities } from 'types';
+import { Entities, Events } from 'types';
 import * as S from './styles';
 
 const OPTIONS = Object.values(Entities) as unknown as Entities[];
@@ -47,6 +47,20 @@ const Select = () => {
 
     setTimeout(() => inputRef.current?.focus(), 0);
   };
+
+  const handleFill = (event: CustomEvent<{ entity: Entities }>) => {
+    const { entity } = event.detail;
+
+    setSelectedOption(entity);
+  };
+
+  useEffect(() => {
+    events.on(Events.FILL_SEARCH, handleFill);
+
+    return () => {
+      events.off(Events.FILL_SEARCH, handleFill);
+    };
+  }, []);
 
   const { value = '' } = inputRef.current || {};
 

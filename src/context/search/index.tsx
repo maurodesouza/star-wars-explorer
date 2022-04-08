@@ -98,11 +98,20 @@ const SearchProvider = ({ children }: SearchProviderProps) => {
     }
   };
 
+  const handleFillSearchFields = () => {
+    const entity = entityRef.current;
+    const search = searchRef.current;
+
+    events.search.fill({ entity, search });
+  };
+
   useEffect(() => {
     events.on(Events.MAKE_SEARCH, fetchData);
+    events.on(Events.VISIT_EXPLORER_PAGE, handleFillSearchFields);
 
     return () => {
       events.off(Events.MAKE_SEARCH, fetchData);
+      events.off(Events.VISIT_EXPLORER_PAGE, handleFillSearchFields);
     };
   }, []);
 
