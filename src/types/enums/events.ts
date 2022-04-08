@@ -10,4 +10,6 @@ export enum Events {
 
   RELATIONS_FILTER = 'app.relations.filter',
   RELATIONS_FILTER_OPTIONS = 'app.relations.filter.options',
+
+  VISIT_EXPLORER_PAGE = 'app.page..explorer.visit',
 }
