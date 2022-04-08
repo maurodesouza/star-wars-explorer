@@ -1,8 +1,7 @@
 const slugfy = (string: string) =>
   string
     .toLocaleLowerCase()
-    .replace(/\s/g, '-')
-    .replace(/\//g, '-')
+    .replace(/[\s\/]/g, '-')
     .replace(/[aáàä]/g, 'a')
     .replace(/[eéë]/g, 'e')
     .replace(/[iíï]/g, 'i')
