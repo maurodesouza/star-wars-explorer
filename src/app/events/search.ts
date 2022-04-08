@@ -6,6 +6,8 @@ type MakeSearchArgs = {
   search?: string;
 };
 
+type FillSearchArgs = MakeSearchArgs;
+
 class SearchEventsHandle extends BaseEventHandle {
   constructor() {
     super();
@@ -13,6 +15,10 @@ class SearchEventsHandle extends BaseEventHandle {
 
   make = (args: MakeSearchArgs) => {
     this.emit(Events.MAKE_SEARCH, args);
+  };
+
+  fill = (args: FillSearchArgs) => {
+    this.emit(Events.FILL_SEARCH, args);
   };
 
   error = (message: string) => {

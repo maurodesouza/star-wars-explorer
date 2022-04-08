@@ -1,6 +1,7 @@
 export enum Events {
   MAKE_SEARCH = 'app.search.fetch',
   SEARCH_ERROR = 'app.search.error',
+  FILL_SEARCH = 'app.search.fill',
 
   ADD_FAVORITE = 'app.favorites.add',
   REMOVE_FAVORITE = 'app.favorites.remove',
