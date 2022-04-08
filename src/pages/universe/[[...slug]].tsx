@@ -73,9 +73,12 @@ export const getStaticProps: GetStaticProps<Response> = async ({ params }) => {
   }
 
   try {
-    const [search] = slug.split('-');
+    const [text] = slug.split('-');
 
     const path = getEndpointEntityPath(entity);
+
+    const lastTextLetter = text.charAt(text.length - 1);
+    const search = lastTextLetter === 'e' ? text.slice(0, -1) : text;
 
     const { data } = await swapiApi.get<SWAPIGetAllResponse>(`/${path}`, {
       params: {
